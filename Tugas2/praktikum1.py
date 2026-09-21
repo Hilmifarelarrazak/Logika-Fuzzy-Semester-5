@@ -20,15 +20,6 @@ print("Koneksi database berhasil!")
 # ==========================================================
 
 def trapesium_down_bayi(x):
-    """
-    Fungsi keanggotaan Bayi bagian turun.
-
-    Domain:
-    5 < x < 6
-
-    Persamaan:
-    μ(x) = 6 - x
-    """
     return 6 - x
 
 
@@ -37,28 +28,10 @@ def trapesium_down_bayi(x):
 # ==========================================================
 
 def trapesium_up_anak(x):
-    """
-    Fungsi keanggotaan Anak bagian naik.
-
-    Domain:
-    5 < x < 6
-
-    Persamaan:
-    μ(x) = x - 5
-    """
     return x - 5
 
 
 def trapesium_down_anak(x):
-    """
-    Fungsi keanggotaan Anak bagian turun.
-
-    Domain:
-    11 < x < 12
-
-    Persamaan:
-    μ(x) = 12 - x
-    """
     return 12 - x
 
 
@@ -67,28 +40,10 @@ def trapesium_down_anak(x):
 # ==========================================================
 
 def trapesium_up_remaja(x):
-    """
-    Fungsi keanggotaan Remaja bagian naik.
-
-    Domain:
-    9 < x < 10
-
-    Persamaan:
-    μ(x) = x - 9
-    """
     return x - 9
 
 
 def trapesium_down_remaja(x):
-    """
-    Fungsi keanggotaan Remaja bagian turun.
-
-    Domain:
-    19 < x < 20
-
-    Persamaan:
-    μ(x) = 20 - x
-    """
     return 20 - x
 
 
@@ -97,28 +52,10 @@ def trapesium_down_remaja(x):
 # ==========================================================
 
 def trapesium_up_pemuda(x):
-    """
-    Fungsi keanggotaan Pemuda bagian naik.
-
-    Domain:
-    14 < x < 15
-
-    Persamaan:
-    μ(x) = x - 14
-    """
     return x - 14
 
 
 def trapesium_down_pemuda(x):
-    """
-    Fungsi keanggotaan Pemuda bagian turun.
-
-    Domain:
-    24 < x < 25
-
-    Persamaan:
-    μ(x) = 25 - x
-    """
     return 25 - x
 
 
@@ -127,28 +64,10 @@ def trapesium_down_pemuda(x):
 # ==========================================================
 
 def trapesium_up_dewasa(x):
-    """
-    Fungsi keanggotaan Dewasa bagian naik.
-
-    Domain:
-    19 < x < 20
-
-    Persamaan:
-    μ(x) = x - 19
-    """
     return x - 19
 
 
 def trapesium_down_dewasa(x):
-    """
-    Fungsi keanggotaan Dewasa bagian turun.
-
-    Domain:
-    65 < x < 66
-
-    Persamaan:
-    μ(x) = 66 - x
-    """
     return 66 - x
 
 
@@ -157,15 +76,6 @@ def trapesium_down_dewasa(x):
 # ==========================================================
 
 def trapesium_up_lansia(x):
-    """
-    Fungsi keanggotaan Lansia bagian naik.
-
-    Domain:
-    64 < x < 65
-
-    Persamaan:
-    μ(x) = x - 64
-    """
     return x - 64
 
 
@@ -175,50 +85,36 @@ def trapesium_up_lansia(x):
 
 fungsi = {
 
-    "trapesium_down_bayi":
-        trapesium_down_bayi,
+    "trapesium_down_bayi": trapesium_down_bayi,
 
-    "trapesium_up_anak":
-        trapesium_up_anak,
+    "trapesium_up_anak": trapesium_up_anak,
+    "trapesium_down_anak": trapesium_down_anak,
 
-    "trapesium_down_anak":
-        trapesium_down_anak,
+    "trapesium_up_remaja": trapesium_up_remaja,
+    "trapesium_down_remaja": trapesium_down_remaja,
 
-    "trapesium_up_remaja":
-        trapesium_up_remaja,
+    "trapesium_up_pemuda": trapesium_up_pemuda,
+    "trapesium_down_pemuda": trapesium_down_pemuda,
 
-    "trapesium_down_remaja":
-        trapesium_down_remaja,
+    "trapesium_up_dewasa": trapesium_up_dewasa,
+    "trapesium_down_dewasa": trapesium_down_dewasa,
 
-    "trapesium_up_pemuda":
-        trapesium_up_pemuda,
-
-    "trapesium_down_pemuda":
-        trapesium_down_pemuda,
-
-    "trapesium_up_dewasa":
-        trapesium_up_dewasa,
-
-    "trapesium_down_dewasa":
-        trapesium_down_dewasa,
-
-    "trapesium_up_lansia":
-        trapesium_up_lansia
+    "trapesium_up_lansia": trapesium_up_lansia
 }
 
 
 # ==========================================================
-# 9. DAFTAR TABEL
+# 9. DAFTAR TABEL DATABASE
 # ==========================================================
 
 tabel_kategori = {
 
-    "bayi": "tb_domain_usia_bayi",
-    "anak": "tb_domain_usia_anak",
-    "remaja": "tb_domain_usia_remaja",
-    "pemuda": "tb_domain_usia_pemuda",
-    "dewasa": "tb_domain_usia_dewasa",
-    "lansia": "tb_domain_usia_lansia"
+    "Bayi": "tb_domain_usia_bayi",
+    "Anak": "tb_domain_usia_anak",
+    "Remaja": "tb_domain_usia_remaja",
+    "Pemuda": "tb_domain_usia_pemuda",
+    "Dewasa": "tb_domain_usia_dewasa",
+    "Lansia": "tb_domain_usia_lansia"
 }
 
 
@@ -230,7 +126,6 @@ def fuzzifikasi_usia(x, kategori):
 
     cursor = db.cursor()
 
-    # Mengambil nama tabel berdasarkan kategori
     nama_tabel = tabel_kategori[kategori]
 
     query = f"""
@@ -246,21 +141,35 @@ def fuzzifikasi_usia(x, kategori):
 
     cursor.close()
 
+    # Jika usia tidak ditemukan
     if not data:
-        return None
+        return 0
 
-    # Mengecek semua interval
+    nilai_maksimum = 0
+
+    # Mengecek setiap fungsi
     for batas_bawah, batas_atas, nama_fungsi in data:
 
-        # Jika nilai database = 0
+        # ------------------------------------------
+        # Fungsi bernilai 0
+        # ------------------------------------------
+
         if nama_fungsi == "0":
+
             nilai = 0
 
-        # Jika nilai database = 1
+        # ------------------------------------------
+        # Fungsi bernilai 1
+        # ------------------------------------------
+
         elif nama_fungsi == "1":
+
             nilai = 1
 
-        # Jika database memberikan nama fungsi
+        # ------------------------------------------
+        # Fungsi trapesium
+        # ------------------------------------------
+
         elif nama_fungsi in fungsi:
 
             fungsi_y = fungsi[nama_fungsi]
@@ -273,15 +182,21 @@ def fuzzifikasi_usia(x, kategori):
                 f"Fungsi '{nama_fungsi}' belum dibuat di Python."
             )
 
-        # Memastikan nilai berada antara 0 dan 1
+        # ------------------------------------------
+        # Membatasi nilai 0 sampai 1
+        # ------------------------------------------
+
         nilai = max(0, min(1, nilai))
 
-        # Karena pada titik batas bisa ada lebih dari satu interval,
-        # kita ambil nilai yang paling besar
-        if nilai >= 0:
-            return nilai
+        # ------------------------------------------
+        # Mengambil nilai terbesar
+        # ------------------------------------------
 
-    return None
+        if nilai > nilai_maksimum:
+
+            nilai_maksimum = nilai
+
+    return nilai_maksimum
 
 
 # ==========================================================
@@ -292,42 +207,56 @@ usia = float(input("Masukkan usia: "))
 
 
 # ==========================================================
-# 12. PROSES FUZZIFIKASI SEMUA KATEGORI
+# 12. VALIDASI USIA
 # ==========================================================
 
-hasil = {}
+if usia < 0 or usia > 150:
 
-for kategori in tabel_kategori:
+    print()
+    print("Usia harus berada pada domain 0 sampai 150 tahun.")
 
-    nilai = fuzzifikasi_usia(usia, kategori)
+else:
 
-    hasil[kategori] = nilai
+    # ======================================================
+    # 13. PROSES FUZZIFIKASI
+    # ======================================================
+
+    hasil = {}
+
+    for kategori in tabel_kategori:
+
+        nilai = fuzzifikasi_usia(
+            usia,
+            kategori
+        )
+
+        hasil[kategori] = nilai
+
+
+    # ======================================================
+    # 14. MENAMPILKAN HASIL
+    # ======================================================
+
+    print()
+    print("========================================")
+    print("          HASIL FUZZIFIKASI USIA")
+    print("========================================")
+
+    print(f"Usia : {usia}")
+
+    print("----------------------------------------")
+
+    for kategori, nilai in hasil.items():
+
+        print(
+            f"{kategori:10} : {nilai:.2f}"
+        )
+
+    print("----------------------------------------")
 
 
 # ==========================================================
-# 13. MENAMPILKAN HASIL
-# ==========================================================
-
-print()
-print("========================================")
-print("        HASIL FUZZIFIKASI USIA")
-print("========================================")
-
-print(f"Usia : {usia}")
-
-print("----------------------------------------")
-
-for kategori, nilai in hasil.items():
-
-    print(
-        f"{kategori.capitalize():10} : {nilai}"
-    )
-
-print("----------------------------------------")
-
-
-# ==========================================================
-# 14. MENUTUP DATABASE
+# 15. MENUTUP DATABASE
 # ==========================================================
 
 db.close()
