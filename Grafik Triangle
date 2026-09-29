@@ -1,0 +1,396 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# =========================================================
+# FUNGSI KEANGGOTAAN SEGITIGA
+# =========================================================
+
+def fungsi_segitiga(x, a, b, c, tinggi):
+    y = np.zeros_like(x, dtype=float)
+
+    # Sisi kiri
+    kondisi_kiri = (x >= a) & (x <= b)
+    y[kondisi_kiri] = (
+        (x[kondisi_kiri] - a) / (b - a)
+    ) * tinggi
+
+    # Sisi kanan
+    kondisi_kanan = (x >= b) & (x <= c)
+    y[kondisi_kanan] = (
+        (c - x[kondisi_kanan]) / (c - b)
+    ) * tinggi
+
+    return y
+
+
+# =========================================================
+# 1. BAYI / ANAK USIA DINI
+# μ = 0,5
+# =========================================================
+
+x = np.linspace(0, 6, 500)
+
+a = 0
+b = 2.5
+c = 5
+mu = 0.5
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Bayi/Anak Usia Dini'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+# LABEL μ
+plt.text(
+    b + 0.15,
+    mu,
+    'μ = 0,5',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Bayi/Anak Usia Dini'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(0, 6)
+plt.ylim(0, 0.55)
+
+plt.xticks(np.arange(0, 6, 1))
+plt.yticks(np.arange(0, 0.6, 0.1))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+# =========================================================
+# 2. ANAK-ANAK
+# μ = 0,2
+# =========================================================
+
+x = np.linspace(5, 12, 500)
+
+a = 6
+b = 8.5
+c = 11
+mu = 0.2
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Anak-anak'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+plt.text(
+    b + 0.15,
+    mu,
+    'μ = 0,2',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Anak-anak'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(5, 12)
+plt.ylim(0, 0.25)
+
+plt.xticks(np.arange(5, 13, 1))
+plt.yticks(np.arange(0, 0.26, 0.05))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+# =========================================================
+# 3. REMAJA
+# μ = 0,27
+# =========================================================
+
+x = np.linspace(9, 20, 500)
+
+a = 10
+b = 15
+c = 19
+mu = 0.27
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Remaja'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+plt.text(
+    b + 0.15,
+    mu,
+    'μ = 0,27',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Remaja'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(9, 20)
+plt.ylim(0, 0.3)
+
+plt.xticks(np.arange(9, 21, 1))
+plt.yticks(np.arange(0, 0.31, 0.05))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+# =========================================================
+# 4. PEMUDA
+# μ = 0,21
+# =========================================================
+
+x = np.linspace(14, 25, 500)
+
+a = 15
+b = 19.5
+c = 24
+mu = 0.21
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Pemuda'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+plt.text(
+    b + 0.15,
+    mu,
+    'μ = 0,21',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Pemuda'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(14, 25)
+plt.ylim(0, 0.25)
+
+plt.xticks(np.arange(14, 26, 1))
+plt.yticks(np.arange(0, 0.26, 0.05))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+# =========================================================
+# 5. DEWASA
+# μ = 0,15
+# =========================================================
+
+x = np.linspace(19, 66, 500)
+
+a = 20
+b = 42.5
+c = 65
+mu = 0.15
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Dewasa'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+plt.text(
+    b + 0.5,
+    mu,
+    'μ = 0,15',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Dewasa'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(19, 66)
+plt.ylim(0, 0.2)
+
+plt.xticks(np.arange(20, 66, 5))
+plt.yticks(np.arange(0, 0.21, 0.05))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+# =========================================================
+# 6. LANJUT USIA
+# μ = 0,12
+# =========================================================
+
+x = np.linspace(59, 81, 500)
+
+a = 60
+b = 70
+c = 80
+mu = 0.12
+
+y = fungsi_segitiga(x, a, b, c, mu)
+
+plt.figure(figsize=(9, 5))
+
+plt.plot(
+    x, y,
+    linewidth=2,
+    label='Lanjut Usia'
+)
+
+# GARIS TENGAH
+plt.vlines(
+    b,
+    0,
+    mu,
+    linestyle='--',
+    linewidth=2
+)
+
+# TITIK PUNCAK
+plt.scatter(b, mu, s=50, zorder=5)
+
+plt.text(
+    b + 0.4,
+    mu,
+    'μ = 0,12',
+    fontsize=11,
+    va='center'
+)
+
+plt.title(
+    'Grafik Fungsi Keanggotaan Lanjut Usia'
+)
+
+plt.xlabel('Usia (tahun)')
+plt.ylabel('Derajat Keanggotaan μ(x)')
+
+plt.xlim(59, 81)
+plt.ylim(0, 0.15)
+
+plt.xticks(np.arange(60, 81, 2))
+plt.yticks(np.arange(0, 0.16, 0.02))
+
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend()
+
+plt.tight_layout()
+plt.show()
