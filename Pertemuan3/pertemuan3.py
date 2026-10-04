@@ -1,88 +1,51 @@
 import mysql.connector
 
-
-# ==========================================================
 # 1. KONEKSI DATABASE
-# ==========================================================
-
 db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
     database="logika_fuzzy"
 )
-
 print("Koneksi database berhasil!")
 
-
-# ==========================================================
 # 2. FUNGSI KEANGGOTAAN BAYI
-# ==========================================================
-
 def trapesium_down_bayi(x):
     return 6 - x
 
-
-# ==========================================================
 # 3. FUNGSI KEANGGOTAAN ANAK
-# ==========================================================
-
 def trapesium_up_anak(x):
     return x - 5
-
 
 def trapesium_down_anak(x):
     return 12 - x
 
-
-# ==========================================================
 # 4. FUNGSI KEANGGOTAAN REMAJA
-# ==========================================================
-
 def trapesium_up_remaja(x):
     return x - 9
-
 
 def trapesium_down_remaja(x):
     return 20 - x
 
-
-# ==========================================================
 # 5. FUNGSI KEANGGOTAAN PEMUDA
-# ==========================================================
-
 def trapesium_up_pemuda(x):
     return x - 14
-
 
 def trapesium_down_pemuda(x):
     return 25 - x
 
-
-# ==========================================================
 # 6. FUNGSI KEANGGOTAAN DEWASA
-# ==========================================================
-
 def trapesium_up_dewasa(x):
     return x - 19
-
 
 def trapesium_down_dewasa(x):
     return 66 - x
 
-
-# ==========================================================
 # 7. FUNGSI KEANGGOTAAN LANSIA
-# ==========================================================
-
 def trapesium_up_lansia(x):
     return x - 64
 
-
-# ==========================================================
 # 8. DAFTAR FUNGSI
-# ==========================================================
-
 fungsi = {
 
     "trapesium_down_bayi": trapesium_down_bayi,
@@ -102,11 +65,7 @@ fungsi = {
     "trapesium_up_lansia": trapesium_up_lansia
 }
 
-
-# ==========================================================
 # 9. DAFTAR TABEL DATABASE
-# ==========================================================
-
 tabel_kategori = {
 
     "Bayi": "tb_domain_usia_bayi",
@@ -117,10 +76,7 @@ tabel_kategori = {
     "Lansia": "tb_domain_usia_lansia"
 }
 
-
-# ==========================================================
 # 10. FUNGSI FUZZIFIKASI
-# ==========================================================
 
 def fuzzifikasi_usia(x, kategori):
 
@@ -199,9 +155,7 @@ def fuzzifikasi_usia(x, kategori):
     return nilai_maksimum
 
 
-# ==========================================================
 # 11. INPUT USIA
-# ==========================================================
 
 usia = float(input("Masukkan usia: "))
 
@@ -233,9 +187,7 @@ else:
         hasil[kategori] = nilai
 
 
-    # ======================================================
     # 14. MENAMPILKAN HASIL
-    # ======================================================
 
     print()
     print("========================================")
@@ -255,8 +207,6 @@ else:
     print("----------------------------------------")
 
 
-# ==========================================================
 # 15. MENUTUP DATABASE
-# ==========================================================
 
 db.close()
