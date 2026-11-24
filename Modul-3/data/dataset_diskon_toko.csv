@@ -1,0 +1,21 @@
+id,nama_pelanggan,jumlah_pembelian,frekuensi_belanja,diskon_aktual
+1,Ahmad Fauzi,50.0,1.0,8.0
+2,Siti Aminah,100.0,2.0,8.0
+3,Budi Santoso,150.0,3.0,8.5
+4,Dewi Lestari,250.0,4.0,10.0
+5,Eko Prasetyo,200.0,8.0,9.0
+6,Rina Wulandari,300.0,14.0,25.0
+7,Doni Saputra,450.0,6.0,18.0
+8,Maya Indah,500.0,10.0,25.0
+9,Hendra Gunawan,550.0,12.0,26.0
+10,Agus Kurniawan,600.0,17.0,40.0
+11,Nita Permata,700.0,2.0,20.0
+12,Joko Widodo,800.0,5.0,26.0
+13,Sri Rahayu,850.0,10.0,42.0
+14,Bambang Pamungkas,900.0,15.0,42.0
+15,Lia Marlina,950.0,18.0,43.0
+16,Fajar Siddiq,120.0,19.0,24.0
+17,Indra Wijaya,400.0,2.0,9.5
+18,Tania Putri,650.0,8.0,25.0
+19,Yusuf Mansur,750.0,16.0,42.0
+20,Mega Suryani,980.0,20.0,43.0

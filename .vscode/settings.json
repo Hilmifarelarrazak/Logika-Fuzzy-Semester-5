@@ -1,0 +1,21 @@
+{
+  "python.defaultInterpreterPath": "C:/Program Files/Python313/python.exe",
+  "python.analysis.extraPaths": [
+    "C:/Users/ASUS Vivobook/AppData/Roaming/Python/Python313/site-packages",
+    "${workspaceFolder}/Modul-3/src",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/src",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan11",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan12",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan13",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan14"
+  ],
+  "python.autoComplete.extraPaths": [
+    "C:/Users/ASUS Vivobook/AppData/Roaming/Python/Python313/site-packages",
+    "${workspaceFolder}/Modul-3/src",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/src",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan11",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan12",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan13",
+    "${workspaceFolder}/Modul3_240306013_Hilmifarelarrazak.ipynb/Pertemuan14"
+  ]
+}

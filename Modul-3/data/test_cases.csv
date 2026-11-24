@@ -1,0 +1,21 @@
+id_transaksi,nama_pelanggan,jumlah_pembelian,frekuensi_belanja,kategori_ekspektasi,keterangan
+TRX-001,Ahmad Fauzi,50.0,1.0,Kecil,Belanja perdana nominal kecil diskon dasar
+TRX-002,Siti Aminah,100.0,2.0,Kecil,Belanja sedikit frekuensi jarang
+TRX-003,Budi Santoso,150.0,3.0,Kecil,Batas atas pembelian sedikit frekuensi rendah
+TRX-004,Dewi Lestari,250.0,4.0,Kecil,Pembelian sedikit menjelang sedang frekuensi jarang
+TRX-005,Eko Prasetyo,200.0,8.0,Kecil,Pembelian sedikit tetapi frekuensi mulai sedang
+TRX-006,Rina Wulandari,300.0,14.0,Sedang,Pembelian sedikit namun frekuensi sangat sering
+TRX-007,Doni Saputra,450.0,6.0,Kecil,Pembelian sedang frekuensi transisi jarang-sedang menghasilkan diskon dasar
+TRX-008,Maya Indah,500.0,10.0,Sedang,Kasus tipikal titik tengah pelanggan loyal reguler
+TRX-009,Hendra Gunawan,550.0,12.0,Sedang,Pembelian sedang frekuensi mendekati sering
+TRX-010,Agus Kurniawan,600.0,17.0,Besar,Pembelian sedang frekuensi sangat sering
+TRX-011,Nita Permata,700.0,2.0,Sedang,Pembelian borongan tapi jarang belanja
+TRX-012,Joko Widodo,800.0,5.0,Sedang,Pembelian banyak frekuensi di perbatasan jarang-sedang
+TRX-013,Sri Rahayu,850.0,10.0,Besar,Pembelian banyak frekuensi sedang konsisten
+TRX-014,Bambang Pamungkas,900.0,15.0,Besar,Pembelian banyak frekuensi sering berhak diskon besar
+TRX-015,Lia Marlina,950.0,18.0,Besar,Pelanggan VIP transaksi maksimal belanja rutin
+TRX-016,Fajar Siddiq,120.0,19.0,Sedang,Pembeli kecil tapi hampir tiap hari berkunjung
+TRX-017,Indra Wijaya,400.0,2.0,Kecil,Pembeli sedang sesekali datang ke toko
+TRX-018,Tania Putri,650.0,8.0,Sedang,Pembelian moderat tinggi frekuensi sedang
+TRX-019,Yusuf Mansur,750.0,16.0,Besar,Pembeli borongan dengan frekuensi sering
+TRX-020,Mega Suryani,980.0,20.0,Besar,Kasus batas atas ekstrem kedua variabel input
